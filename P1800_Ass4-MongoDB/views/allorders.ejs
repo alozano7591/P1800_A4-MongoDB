@@ -1,5 +1,6 @@
+<%- include('layouts/header'); -%>
 <body>
-    <%- include('layouts/header'); -%>
+    
     <header>
         <h1>Your Orders</h1>
     </header>
@@ -30,7 +31,6 @@
                     for(var order of orders){
                         %>
                             <tr>
-
                                 <td><%= order.name %></td>
                                 <td><%= order.email %></td>
                                 <td><%= order.phone %></td> 
@@ -47,7 +47,6 @@
                                 <td><%= order.subTotal.toFixed(2) %> </td>
                                 <td><%= order.tax.toFixed(2) %> </td>
                                 <td><%= order.total.toFixed(2) %> </td>
-
                            </tr>
                         <%
                     }

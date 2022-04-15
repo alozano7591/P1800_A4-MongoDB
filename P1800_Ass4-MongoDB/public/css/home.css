@@ -18,7 +18,7 @@ body{
 
     font-family: 'Kalam', cursive;
     font-size: 20px;
-    width: 960px;
+    width: 1200px;
     margin: 50px auto;
 }
 
@@ -236,6 +236,10 @@ input[type="submit"]:active{
 
 /************* END OF RECEIPT AREA ******************************/
 
+table{
+    width: 100%;
+}
+
 table, td, th{
     border: 2px solid white;
     background-color:#E2E6E9;
@@ -249,6 +253,5 @@ td, th{
 }
 
 th{
-    font-weight: bold;
-    
+    font-weight: bold;   
 }
