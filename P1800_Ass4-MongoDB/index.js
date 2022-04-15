@@ -225,7 +225,7 @@ function GetTaxRate(prov)
     var taxRate = 0;
 
     switch(prov){
-        case "Alb":
+        case "AB":
             taxRate = .05;
             prov = "Alberta";
         break;
@@ -233,19 +233,19 @@ function GetTaxRate(prov)
             taxRate = .12;
             prov = "British Columbia";
         break;
-        case "Man":
+        case "MB":
             taxRate = .12;
             prov = "Manitoba";
         break;
-        case "NewB":
+        case "NB":
             taxRate = .15;
             prov = "New Brunswick";
         break;
-        case "Newf":
+        case "NL":
             taxRate = .15;
             prov = "Newfoundland and Labrador";
         break;
-        case "NorthT":
+        case "NT":
             taxRate = .05;
             prov = "Northwest Territories";
         break;
@@ -253,27 +253,27 @@ function GetTaxRate(prov)
             taxRate = .15;
             prov = "Nova Scotia";
         break;
-        case "Nun":
+        case "NU":
             taxRate = .05;
             prov = "Nunavut";
         break;
-        case "Ont":
+        case "ON":
             taxRate = .13;
             prov = "Ontario";
         break;
-        case "PEI":
+        case "PE":
             taxRate = .15;
             prov = "Prince Edward Island";
         break;
-        case "Qeb":
+        case "QC":
             taxRate = .14975;
             prov = "Quebec";
         break;
-        case "Sask":
+        case "SK":
             taxRate = .11;
             prov = "Saskatchewan";
         break;
-        case "Yuk":
+        case "YT":
             taxRate = .05;
             prov = "Yukon";
         break;

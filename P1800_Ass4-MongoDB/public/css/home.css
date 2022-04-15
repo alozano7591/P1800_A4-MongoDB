@@ -238,9 +238,10 @@ input[type="submit"]:active{
 
 table, td, th{
     border: 2px solid white;
+    background-color:#E2E6E9;
     border-collapse: collapse;
     margin: 20px auto;
-    color: white;
+    color:black ;
 }
 td, th{
     border: 2px solid white;
@@ -249,4 +250,5 @@ td, th{
 
 th{
     font-weight: bold;
+    
 }
