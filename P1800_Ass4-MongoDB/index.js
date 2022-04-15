@@ -302,6 +302,14 @@ function GetShippingCost(shipping)
 
 }
 
+// All orders page
+myApp.get('/allorders',function(req, res){
+    Order.find({}).exec(function(err, orders){
+        res.render('allorders', {orders:orders});
+    });
+        
+});
+
 //listen to port 8080 because i say so
 myApp.listen(8080);
 console.log('Everything executed fine.. Open http://localhost:8080/');

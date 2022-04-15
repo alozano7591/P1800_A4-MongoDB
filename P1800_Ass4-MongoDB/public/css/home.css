@@ -32,6 +32,40 @@ header{
     text-align: center;
 }
 
+nav{
+    background-color: #28183E;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #2c2c2c;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 0 30px;
+}
+
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+
+nav ul li a:hover{
+    color: rgb(251, 255, 0);
+    font-weight: bold;
+}
+
 footer{
     background-color: #28183E;
     border: 3px solid white;
@@ -202,3 +236,17 @@ input[type="submit"]:active{
 
 /************* END OF RECEIPT AREA ******************************/
 
+table, td, th{
+    border: 2px solid white;
+    border-collapse: collapse;
+    margin: 20px auto;
+    color: white;
+}
+td, th{
+    border: 2px solid white;
+    padding: 5px 4px;
+}
+
+th{
+    font-weight: bold;
+}
