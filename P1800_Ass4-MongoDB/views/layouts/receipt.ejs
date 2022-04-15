@@ -1,0 +1,131 @@
+<section class="receiptSect">
+    <h2 id="formResult">Your Receipt:</h2>
+  
+    <div class="receiptData">
+
+      <%
+        if(typeof(total) != 'undefined'){
+          %>
+
+          <table class="receiptTable">
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Name </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> <%= name %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Email </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> <%= email %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Phone </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> <%= phone %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Delivery Address </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label>   
+                  <%= address %>, <br>
+                  <%= city %>, <br>
+                  <%= province %>, <%= postalCode %>
+                </label> 
+              </div>
+            </div>
+
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label><%= ccm %> CCM @ $300</label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= ccmTot %>  </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label><%= electric %> electric @ $450</label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= electricTot %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label><%= bmx %> bmx @ $550</label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= bmxTot %>  </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label><%= mountain %> mountain @ $400</label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= mountainTot %> </label> 
+              </div>
+            </div>
+
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Delivery </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= deliveryCost.toFixed(2) %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Subtotal </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= subTotal.toFixed(2) %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Tax </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= tax.toFixed(2) %> </label> 
+              </div>
+            </div>
+            <div class="receiptLine">
+              <div class="receiptLeft">
+                <label>Total </label>
+              </div>
+              <label>:</label>
+              <div class="receiptRight">
+                <label> $<%= total.toFixed(2) %> </label> 
+              </div>
+            </div>
+          </table>
+          <%
+        }
+      %>
+
+    </div>
+</section>

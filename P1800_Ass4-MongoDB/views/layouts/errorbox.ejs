@@ -1,0 +1,23 @@
+<section class="errorSect">
+       <% 
+         if(typeof(errors) != 'undefined'){
+ 
+           for(var error of errors){
+           %>
+             <p class="errors"><%= error.msg %></p>
+             
+           <%
+           }
+ 
+         }
+       %>
+       
+       <%
+         if(typeof(error2) != 'undefined'){
+           %>
+           <p> <%= error2 %> </p>
+           <%
+         }
+       %>
+ 
+</section>

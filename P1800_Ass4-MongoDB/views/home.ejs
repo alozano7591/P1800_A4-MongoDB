@@ -1,0 +1,158 @@
+<%- include('layouts/header'); -%>
+<body>
+    <header>
+        <h1>Billy Bob's BICYCLES</h1>
+    </header>
+
+    <section class="shopFormSect">
+    
+      <h2>BICYCLES FOR SALE!!!</h2>
+      <section class="formSect">
+        <form name="shopform" method="Post" onsubmit=""  action="" >
+          <section class="purchaseInfoSect">
+          
+            <div class="fieldWrapper1">
+                <div class="labelWrapper">
+                    <label for="name">Name*:</label> 
+                </div>
+                <input id="name" placeholder="First Last" type="text" name="name"><br/>
+            </div>
+
+            <div class="fieldWrapper1">
+              <div class="labelWrapper"> 
+                  <label>Email*:</label> 
+              </div>
+              <input id="email" placeholder="email@address.com" name="email"><br/>
+          </div>
+
+          <div class="fieldWrapper1">
+              <div class="labelWrapper"> 
+                  <label>Phone*:</label> 
+              </div>
+              <input id="phone" placeholder="123-123-1234" type="phone" name="phone"><br/>
+          </div>
+
+            <div class="fieldWrapper1">
+              <div class="labelWrapper"> 
+                  <label>Address*:</label> 
+              </div>
+              <input id="address" placeholder="123 address st" type="address" name="address"><br/>
+            </div>
+
+            <div class="fieldWrapper1">
+              <div class="labelWrapper"> 
+                  <label>City*:</label> 
+              </div>
+              <input id="city" placeholder="City" name="city"><br/>
+            </div>
+
+            <div class="fieldWrapper1">
+              <div class="labelWrapper"> 
+                  <label>Postal Code*:</label> 
+              </div>
+              <input id="postalCode" placeholder="A1A 2A2" name="postalCode"><br/>
+            </div>
+
+            <div class="fieldWrapper1">
+              <div class="labelWrapper"> 
+                  <label>Province*:</label> 
+              </div>
+              <select name="province" id="province">
+                <option value="">Select A Province</option>
+                <option value="Alb">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="Man">Manitoba</option>
+                <option value="NewB">New Brunswick</option>
+                <option value="Newf">Newfoundland and Labrador</option>
+                <option value="NorthT">Northwest Territories</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="Nun">Nunavut</option>
+                <option value="Ont">Ontario</option>
+                <option value="PEI">Prince Edward Island</option>
+                <option value="Qeb">Quebec</option>
+                <option value="Sask">Saskatchewan</option>
+                <option value="Yuk">Yukon</option>
+            </select>
+            </div>
+
+          </section>
+
+         <div class="productSect">
+            <div class="fieldWrapper1">
+                <label>CCM:</label>
+                <input id="ccm" name="ccm" min="0" max="20" value="0">
+            </div>
+            
+            <div class="fieldWrapper1">
+                <label>Electric:</label>
+                
+                <input id="electric" name="electric" min="0" max="20" value="0">
+            </div>
+            
+            <div class="fieldWrapper1">
+                <label>BMX:</label>
+                <input id="bmx" name="bmx" min="0" max="20" value="0">
+            </div>
+   
+            <div class="fieldWrapper1">
+                <label>Mountain:</label>
+                <input id="mountain" name="mountain" min="0" max="20" value="0">
+            </div>
+
+            <div class="fieldWrapper1">
+              <div class="labelWrapper"> 
+                  <label>Delivery Time:</label> 
+              </div>
+              <select name="delivery" id="delivery">
+                <option value="Del1">1 Day</option>
+                <option value="Del3">3 Day</option>
+                <option value="Del7">Standard</option>
+            </select>
+            </div>
+
+         </div>
+   
+         <input type="submit" value="Place Order">
+       </form>  
+      </section>
+
+    
+
+    <!-- ERROR AREA, only shown if errors exist -->
+      <%
+        if(typeof(errors) != 'undefined'){
+          %>
+            <%- include('layouts/errorbox'); -%>
+          <%
+        }
+      %>
+
+      <%
+        if(typeof(error2) != 'undefined'){
+          %>
+            <%- include('layouts/errorbox'); -%>
+          <%
+        }
+      %>
+
+    <!-- END OF ERROR AREA, only shown if errors exist -->
+
+    <!-- receipt area : only show receipt if purchase successful-->
+
+    <%
+      if(typeof(subTotal) != 'undefined'){
+        %>
+          <%- include('layouts/receipt'); -%>
+        <%
+      }
+    %>
+  
+    <!-- END OF receipt area -->
+
+    </section>
+
+   <div class="clear"></div>
+
+   <%- include('layouts/footer'); -%>
+
+</body>

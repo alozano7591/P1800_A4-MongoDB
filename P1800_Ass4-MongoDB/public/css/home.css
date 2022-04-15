@@ -1,0 +1,204 @@
+/* Alfredo Lozano alozano7591@conestogac.on.ca */
+/* Color pallete... i realize it's a pretty ugly pallete but i was experimenting
+8F8F36
+28183E
+281A28
+5FC8EE
+E2E6E9
+*/
+
+body{
+    background-color: #8F8F36;
+    background-color: #28183E;
+    background-color: #281A28;
+    background-color: #5FC8EE;
+    background-color: #E2E6E9;
+
+    background-color: #5FC8EE;
+
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    width: 960px;
+    margin: 50px auto;
+}
+
+
+header{
+    background-color: #28183E;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #2c2c2c;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer{
+    background-color: #28183E;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #2c2c2c;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+}
+
+.clear{
+    clear: both; 
+}
+
+/************* Start of FORM AREA ****************************/
+
+
+form{
+    width: 450px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #3f333f;
+    padding: 30px;
+    margin: 50px auto;
+    color: white;
+    background-color: #281A28;
+    border-radius: 5px;
+}
+
+.shopFormSect{
+    width: 100%;
+    float: left;
+    margin: 1%;
+
+}
+
+.shopFormSect h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.fieldWrapper1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0px;
+    padding: 5px 0;
+}
+
+.purchaseInfoSect{
+    padding: 15px 10px 0 10px;
+}
+
+.purchaseInfoSect select{
+    width: 100%;
+    height: 35px;
+}
+
+.fieldWrapperItem{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px 0;
+}
+
+.productSect{
+    padding: 15px 10px;
+}
+
+.productSect select{
+    width: 100%;
+    height: 35px;
+}
+
+
+label{
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+select{
+    width: 100px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Kalam', cursive;
+}
+
+input[type="submit"]{
+    font-size: 22px;
+    background-color: #BCBC4E;
+    color: #28183E;
+    font-family: 'Kalam', cursive;
+    border: 0px;
+    padding: 12px;
+    height: 50px;
+    box-shadow: 3px 3px 1px #223843;
+    border-radius: 9px;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 1px #498467;
+}
+
+input[type="submit"]:active{
+    background-color: #E2E6E9;
+    box-shadow: 3px 3px 1px #498467;
+}
+
+
+/************* End of FORM AREA ****************************/
+
+
+/***************** START of ERROR Area **************/ 
+
+.errorSect{
+    width: 380px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #252525;
+    padding: 30px;
+    margin: 50px auto;
+    color: white;
+    background-color: #252525;
+    border-radius: 5px;
+    color: #FF7070;
+}
+
+/***************** End of ERROR Area **************/ 
+
+
+/************* START OF RECEIPT AREA ******************************/
+
+.receiptSect{
+    text-align: center;
+}
+
+.receiptData{
+    width: 450px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #252525;
+    padding: 30px;
+    margin: 50px auto;
+    color: white;
+    background-color: #252525;
+    border-radius: 5px;
+}
+
+.receiptLine{
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+    grid-gap: 5px;
+    padding: 0px 0;
+    text-align: center;
+}
+
+.receiptLeft{
+    text-align: left;
+}
+
+.receiptRight{
+    text-align: right;
+}
+
+/************* END OF RECEIPT AREA ******************************/
+
