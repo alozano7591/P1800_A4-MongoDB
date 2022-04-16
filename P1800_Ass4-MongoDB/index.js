@@ -10,7 +10,7 @@ const {check, validationResult} = require('express-validator');
 
 //set up mongoose by cmd: npm install mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/bikestore', {
+mongoose.connect('mongodb://localhost:27017/whiskystore', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -25,10 +25,10 @@ const Order = mongoose.model('Order',{
     postalCode: String,
     province: String,
     
-    ccm: Number,
-    electric: Number,
-    bmx: Number,
-    mountain: Number,
+    irish: Number,
+    bourbon: Number,
+    scotch: Number,
+    canadian: Number,
     
     deliveryCost : Number,
     subTotal: Number,
@@ -56,12 +56,15 @@ var phoneRegex = /^[0-9]{3}\-[0-9]{3}\-[0-9]{4}$/;
 var posNumRegex = /^(0|[1-9][0-9]{0,9})$/;
 var postalRegex = /[A-Za-z]\d[A-Za-z]([-]| )?\d[A-Za-z]\d/;
 
+
 var products = [
-    ["ccm",                300,         0],
-    ["electric",           450,          0],
-    ["bmx",                550,          0],
-    ["mountain",            400,          0]
-];
+    ["irish",           32,         0],
+    ["bourbon",         30,         0],
+    ["scotch",          42,         0],
+    ["canadian",        34,         0]
+]
+;
+
 
 //function to check a value using regular expression
 function checkRegex(userInput, regex){
@@ -104,10 +107,10 @@ myApp.post('/', [
     check('postalCode', 'Please enter a valid postal code').custom(customPostalCodeValidation),
     check('province', 'Please select a province').notEmpty(),
     
-    check('ccm').custom(customFruitValidation),
-    check('electric').custom(customFruitValidation),
-    check('bmx').custom(customFruitValidation),
-    check('mountain').custom(customFruitValidation)
+    check('irish').custom(customFruitValidation),
+    check('bourbon').custom(customFruitValidation),
+    check('scotch').custom(customFruitValidation),
+    check('canadian').custom(customFruitValidation)
     
 ],function(req, res){
 
@@ -135,22 +138,22 @@ myApp.post('/', [
         var province = req.body.province;
 
         //product-purchase info sale
-        var ccm = req.body.ccm;
-        var electric = req.body.electric;
-        var bmx = req.body.bmx;
-        var mountain = req.body.mountain;
+        var irish = req.body.irish;
+        var bourbon = req.body.bourbon;
+        var scotch = req.body.scotch;
+        var canadian = req.body.canadian;
 
         //delivery
         var delivery = req.body.delivery;
 
-        var totalProductsPicked = parseInt(ccm + electric + bmx + mountain);
+        var totalProductsPicked = parseInt(irish + bourbon + scotch + canadian);
 
         var deliveryCost = 0;
         deliveryCost = GetShippingCost(delivery);
 
         //calc sub totals
         var subTotal = 0;
-        subTotal = GetBikeCost("ccm", ccm) + GetBikeCost("electric", electric) + GetBikeCost("bmx", bmx) + GetBikeCost("mountain", mountain) + deliveryCost;
+        subTotal = GetItemCost("irish", irish) + GetItemCost("bourbon", bourbon) + GetItemCost("scotch", scotch) + GetItemCost("canadian", canadian) + deliveryCost;
 
         //get tax info
         var taxRate = GetTaxRate(province); 
@@ -169,14 +172,14 @@ myApp.post('/', [
                 province : province,
 
                 //bikes
-                ccm : ccm,
-                ccmTot : GetBikeCost("ccm", ccm),
-                electric : electric,
-                electricTot : GetBikeCost("electric", electric),
-                bmx : bmx,
-                bmxTot : GetBikeCost("bmx", bmx),
-                mountain : mountain,
-                mountainTot : GetBikeCost("mountain", mountain),
+                irish : irish,
+                irishTot : GetItemCost("irish", irish),
+                bourbon : bourbon,
+                bourbonTot : GetItemCost("bourbon", bourbon),
+                scotch : scotch,
+                scotchTot : GetItemCost("scotch", scotch),
+                canadian : canadian,
+                canadianTot : GetItemCost("canadian", canadian),
 
                 //totals
                 deliveryCost : deliveryCost,
@@ -205,12 +208,12 @@ myApp.post('/', [
     
 });
 
-function GetBikeCost(bikePicked, amt)
+function GetItemCost(prodPicked, amt)
 {
     let dollarAmt = 0;
     for(let i = 0; i < products.length; i++)
     {
-        if(bikePicked == products[i][0])
+        if(prodPicked == products[i][0])
         {
             dollarAmt = parseInt(products[i][1]) * amt;
             return dollarAmt;

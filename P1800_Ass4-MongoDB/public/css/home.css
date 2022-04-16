@@ -1,15 +1,14 @@
 /* Alfredo Lozano alozano7591@conestogac.on.ca */
 /* Color pallete... i realize it's a pretty ugly pallete but i was experimenting
-8F8F36
-28183E
-281A28
-5FC8EE
-E2E6E9
+281C15
+75553E
+C2A079
+948C8C
+939383
 */
 
 body{
-
-    background-color: #5FC8EE;
+    background-color: #939383;
 
     font-family: 'Kalam', cursive;
     font-size: 20px;
@@ -19,7 +18,7 @@ body{
 
 
 header{
-    background-color: #28183E;
+    background-color: #281C15;
     border: 3px solid white;
     box-shadow: 0 0 10px #2c2c2c;
     color: white;
@@ -28,7 +27,7 @@ header{
 }
 
 nav{
-    background-color: #28183E;
+    background-color: #281C15;
     border: 3px solid white;
     box-shadow: 0 0 10px #2c2c2c;
     color: white;
@@ -62,7 +61,7 @@ nav ul li a:hover{
 }
 
 footer{
-    background-color: #28183E;
+    background-color: #281C15;
     border: 3px solid white;
     box-shadow: 0 0 10px #2c2c2c;
     color: white;
@@ -85,7 +84,7 @@ form{
     padding: 30px;
     margin: 50px auto;
     color: white;
-    background-color: #281A28;
+    background-color: #281C15;
     border-radius: 5px;
 }
 
@@ -155,8 +154,10 @@ select{
 
 input[type="submit"]{
     font-size: 22px;
-    background-color: #BCBC4E;
-    color: #28183E;
+    background-color: #948C8C;
+    
+    color: black;
+    font-weight: bold;
     font-family: 'Kalam', cursive;
     border: 0px;
     padding: 12px;
@@ -167,6 +168,7 @@ input[type="submit"]{
 
 input[type="submit"]:hover{
     cursor: pointer;
+    background-color: #939383;
     box-shadow: 3px 3px 1px #498467;
 }
 
