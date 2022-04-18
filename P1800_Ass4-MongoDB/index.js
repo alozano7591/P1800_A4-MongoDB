@@ -117,11 +117,6 @@ myApp.post('/', [
     const errors = validationResult(req);
     if (!errors.isEmpty()){
 
-        for(let i = 0; i < errors.length; i++)
-        {
-            errorString += errors[i].toString() + "\n";
-        }
-
         res.render('home', {
             errors:errors.array()
         });
